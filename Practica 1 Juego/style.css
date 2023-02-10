@@ -1,0 +1,11 @@
+body{
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    background-image: url("fondo.png");
+    
+}
+
+#lienzo{
+    background-image: url("fondo.gif");
+}
+

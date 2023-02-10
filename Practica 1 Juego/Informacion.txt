@@ -1,0 +1,7 @@
+//https://developer.mozilla.org/es/docs/Web/API/Canvas_API
+//https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/doctype-html/#:~:text=de%20la%20web.-,%C2%BFPara%20qu%C3%A9%20sirve%20DOCTYPE%20html%3F,o%20en%20el%20documento%20HTML.
+//https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+//https://www.arsys.es/blog/que-es-canvas#:~:text=Canvas%20(lienzo)%20es%20un%20elemento,efectos%20din%C3%A1micos%2C%20aplicaciones%203D%E2%80%A6.
+//https://developer.mozilla.org/es/docs/Web/CSS/font-family
+//https://desarrolloweb.com/articulos/1319.php
+//https://developer.mozilla.org/es/docs/Web/API/Window/requestAnimationFrame
