@@ -1,0 +1,42 @@
+body {
+    background-image: url("tela-de-algodon-rick-y-morty-espacio.png");
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+button{
+    height: 20px;
+    width: 75px;
+}
+#results{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;  
+    width: auto;
+    height: auto;
+    
+}
+
+#botones{
+    display: flex;
+    flex-direction: row;
+}
+#page{
+    height: 20px;
+    width: 30px;
+}
+#name{
+    height: 20px;
+    width: 100px;
+}
+#indice{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    -ms-flex-align: center;
+}
+#Titulo{
+    text-align: center;
+}
