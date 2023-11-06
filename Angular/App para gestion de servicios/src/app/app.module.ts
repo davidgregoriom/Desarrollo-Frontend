@@ -5,24 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { FooterComponent } from './templates/footer/footer.component';
-import { LoginComponent } from './views/login/login.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { NewComponent } from './views/new/new.component';
-import { EditComponent } from './views/edit/edit.component';
+import { routingComponents } from "./app-routing.module";
+
+import {ReactiveFormsModule,FormsModule} from '@angular/forms'; //npm i @angular/forms@16.2.12
+import {HttpClientModule}from  '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent,
-    DashboardComponent,
-    NewComponent,
-    EditComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
 # PaginaWeb
 
+Curso de estos videos: https://www.youtube.com/watch?v=ooAmdvpAE-o&list=PLIbWwxXce3VqQxabv3aT0nHnhHQH6F-qG
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
 ## Development server
