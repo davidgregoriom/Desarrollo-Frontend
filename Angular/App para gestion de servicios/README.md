@@ -3,12 +3,18 @@
 Curso de este codigo base: https://www.youtube.com/watch?v=ooAmdvpAE-o&list=PLIbWwxXce3VqQxabv3aT0nHnhHQH6F-qG
 
 Se implemento:
-    Boostrap:
+
+Boostrap:
         Comando:npm install jquery boostrap --save
         Se implemento un login, tabla dinamica
-    Toastr:
+
+Toastr:
         Comandos: 1º:npm install ngx-toastr --save ; 2º:npm install @angular/animations --save;
         Falta esta implementacion y el metodo post.
+
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
