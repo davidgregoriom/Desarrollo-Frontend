@@ -1,6 +1,6 @@
 # PaginaWeb
 
-Curso de estos videos: https://www.youtube.com/watch?v=ooAmdvpAE-o&list=PLIbWwxXce3VqQxabv3aT0nHnhHQH6F-qG
+Curso de este codigo base: https://www.youtube.com/watch?v=ooAmdvpAE-o&list=PLIbWwxXce3VqQxabv3aT0nHnhHQH6F-qG
 
 Se implemento:
     Boostrap:
