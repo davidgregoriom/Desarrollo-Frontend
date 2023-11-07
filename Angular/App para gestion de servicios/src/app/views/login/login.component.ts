@@ -24,8 +24,13 @@ export class LoginComponent {
   errorMessage:string = "";
 
   ngOnInit(): void {
-
+    this.checkLocalStorage();
     //Siguiente video:https://www.youtube.com/watch?v=peL3EtedFjo
+  }
+  checkLocalStorage(){
+    if(localStorage.getItem('token')){
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   onLogin(arg0:login) {

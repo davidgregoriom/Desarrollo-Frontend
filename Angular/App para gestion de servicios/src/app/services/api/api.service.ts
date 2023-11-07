@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { login } from "../../types/login.ts";
 import { response } from "../../types/response.ts";
-import { KLT_type } from "../../types/KLT.ts";
+import { pacient } from "../../types/pacientlist.type.ts";
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -14,7 +14,12 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
 
-  onLogin(data:login){
+  onLogin(data:login):Observable<response> {
     return this.http.post<response>(this.url+"login",data);
   }
+  getAllPacients(page:number):Observable<pacient[]>{
+    return this.http.get<pacient[]>(this.url+"pacients?page="+page);
+
+  }
+
 }
