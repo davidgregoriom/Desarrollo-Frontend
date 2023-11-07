@@ -25,7 +25,6 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.checkLocalStorage();
-    //Siguiente video:https://www.youtube.com/watch?v=peL3EtedFjo
   }
   checkLocalStorage(){
     if(localStorage.getItem('token')){
