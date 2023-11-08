@@ -1,1 +1,29 @@
-<p>new works!</p>
+<app-header></app-header>
+
+<div class="container">
+    <form [formGroup]="newForm" (ngSubmit)="postForm(newForm.value)">
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+
+        </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Apellido</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+        </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Correo</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email">
+        </div>
+        <div class="form-group">
+                <label for="exampleFormControlInput1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña">
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-dark"(click)="out()">Salir</button>
+    </form>
+</div>
+
+<app-footer></app-footer>
+```

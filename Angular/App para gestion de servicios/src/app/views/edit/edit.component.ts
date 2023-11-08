@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from "@angular/router";
-import { pacientcomplete } from "../../types/pacient.ts";
-import { ApiService } from "../../services/api/api.service.ts";
+import { pacientcomplete } from "../../types/pacient";
+import { ApiService } from "../../services/api/api.service";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-
-
+import { response } from "../../types/response";
+import { AlertService } from "../../services/alerts/alert.services";
 
 @Component({
   selector: 'app-edit',
@@ -13,7 +13,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class EditComponent implements OnInit {
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute,private api:ApiService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute,private api:ApiService, private alert:AlertService) { }
 
   dataPacient:pacientcomplete|undefined;
   edictFormGroup = new FormGroup({
@@ -49,14 +49,28 @@ export class EditComponent implements OnInit {
   }
   postForm(pacient:pacientcomplete){
     this.api.putPacient(pacient).subscribe((data)=>{
-      console.log(data);
+      const response:response = data;
+      if(response.status === 200){
+        this.alert.showSuccess(response.message,'Success');
+      }else{
+        this.alert.showError(response.message,'Error');
+      }
+
     });
   }
   deleteForm():void{
     const data:pacientcomplete = this.edictFormGroup.value;
     this.api.deletePacient(data).subscribe((data)=>{
-      console.log(data);
+      const response:response = data;
+      if(response.status === 200){
+        this.alert.showSuccess(response.message,'Success');
+      }else{
+        this.alert.showError(response.message,'Error');
+      }
     });
+  }
+  out(){
+    this.router.navigate(['/dashboard']);
   }
 }
 

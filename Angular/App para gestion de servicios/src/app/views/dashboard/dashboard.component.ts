@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from "../../services/api/api.service.ts";
-import { pacient } from "../../types/pacientlist.ts";
+import { ApiService } from "../../services/api/api.service";
+import { pacient } from "../../types/pacientlist";
 import { Router } from "@angular/router";
 
 @Component({

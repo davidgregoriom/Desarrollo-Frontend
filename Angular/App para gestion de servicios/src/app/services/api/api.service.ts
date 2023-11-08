@@ -36,4 +36,7 @@ export class ApiService {
     };
     return this.http.delete<response>(this.url+"pacientdelete/",options);
   }
+  postPacient(pacient:pacient):Observable<response>{
+    return this.http.post<response>(this.url+"pacient",pacient);
+  }
 }

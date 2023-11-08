@@ -1,4 +1,4 @@
-# PaginaWeb
+# PaginaWeb para gestion de pacientes con Angular
 
 Curso de estos videos: https://www.youtube.com/watch?v=ooAmdvpAE-o&list=PLIbWwxXce3VqQxabv3aT0nHnhHQH6F-qG
 
@@ -8,7 +8,8 @@ Se implemento:
         Se implemento un login, tabla dinamica
     Toastr:
         Comandos: 1º:npm install ngx-toastr --save ; 2º:npm install @angular/animations --save;
-        Falta esta implementacion y el metodo post.
+
+Faltaría corregir errores;
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 

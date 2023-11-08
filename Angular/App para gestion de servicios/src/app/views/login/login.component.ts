@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {FormGroup,FormControl,Validators} from '@angular/forms';
 import { ApiService } from "../../services/api/api.service";
-import { login } from "../../types/login.ts";
+import { login } from "../../types/login";
 import { Router } from "@angular/router";
-import { response } from "../../types/response.ts";
+import { response } from "../../types/response";
 
 
 @Component({
@@ -33,7 +33,7 @@ export class LoginComponent {
   }
 
   onLogin(arg0:login) {
-    this.api.onLogin(arg0).subscribe((data)=>{
+    this.api.onLogin(arg0).subscribe(data=>{
       const response:response = data;
       if(response.status){
         localStorage.setItem('token',data.message.token);
