@@ -3,10 +3,13 @@
 Curso de estos videos: https://www.youtube.com/watch?v=ooAmdvpAE-o&list=PLIbWwxXce3VqQxabv3aT0nHnhHQH6F-qG
 
 Se implemento:
-    Boostrap:
+    
+  Boostrap:
         Comando:npm install jquery boostrap --save
-        Se implemento un login, tabla dinamica
-    Toastr:
+
+Se implemento un login, tabla dinamica
+  
+  Toastr:
         Comandos: 1º:npm install ngx-toastr --save ; 2º:npm install @angular/animations --save;
 
 Faltaría corregir errores;
