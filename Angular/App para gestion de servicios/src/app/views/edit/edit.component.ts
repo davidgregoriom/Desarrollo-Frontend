@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from "@angular/router";
 import { pacientcomplete } from "../../types/pacient";
 import { ApiService } from "../../services/api/api.service";
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators,FormsModule } from '@angular/forms';
 import { response } from "../../types/response";
 import { AlertService } from "../../services/alerts/alert.services";
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-edit',
