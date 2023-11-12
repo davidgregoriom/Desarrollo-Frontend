@@ -1,0 +1,49 @@
+/* styles.module.css */
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.header {
+  display: flex;
+  height: 20%;
+  flex-shrink: 0;
+  align-items: flex-end;
+  border-radius: 8px;
+  background-color: #1e40af;
+  container-name: header;
+  padding: 16px;
+}
+
+.content {
+  margin-top: 16px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  container: left-column;
+  gap: 24px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  padding: 24px;
+  width: 40%;
+}
+
+.right-column {
+  display: flex;
+  align-items: center;
+  container: right-column;
+  justify-content: center;
+  padding: 24px;
+  width: 60%;
+}
+
