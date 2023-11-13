@@ -1,5 +1,7 @@
+import SideNav from '../ui/dashboard/sidenav';
 import { monserrat } from '../ui/fonts';
 import '../ui/global.css';
+import styles from './styles.module.css';
 
 export default function Layout({
   children,
@@ -8,14 +10,17 @@ export default function Layout({
 }) { /*Esto envuelve a la página, es el layout de la página*/
   return (
     <html lang="en">
-      <body className={`${monserrat.className} antialiased`}>
-        <header className='py-10 flex justify-center items-center'>
+      <body className={`${monserrat.className} ${styles.main}`}>
+        <header className={styles.header}>
           <p>Esto es el header</p>
         </header>
-        {/*Esto es parte del layout*/}
-        Esto es parte del layout
-        {children}
-        <footer className='py-10 flex justify-center items-center'>
+        <div className={styles.side}>
+          <SideNav />
+        </div>
+        <div className={styles.children}>
+          {children}
+        </div>
+        <footer className={styles.footer}>
           <p>Esto es el footer</p>
         </footer>
         </body>
