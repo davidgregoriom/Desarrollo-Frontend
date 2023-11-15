@@ -1,0 +1,52 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[7].use[3]!./app/components/styles.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+/* styles.module.css */
+
+.styles_main__bbqmW {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 6px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.styles_header__Wcfof {
+  grid-column:1;
+  grid-row: 1;
+  display: flex;
+  height: 20%;
+  flex-shrink: 0;
+  align-items: flex-end;
+  border-radius: 8px;
+  background-color: rgb(20, 190, 212);
+  padding: 16px;
+}
+
+.styles_left-column__n9E3a {
+  grid-column: 5;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  padding: 24px;
+  width: 40%;
+}
+
+.styles_right-column__pqPsz {
+  grid-column: 1;
+  grid-row: 12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  width: 60%;
+}
+
+
