@@ -1,19 +1,20 @@
+import {character} from '../../components/functions.tsx';
+import {Character} from '../../types.ts';
+
+type ServerSideProps = {
+    params : {
+        id:number,
+    }
+}
 
 "use client";
-export default function Home(){
-
-    const app
+export default async function Home(prop:ServerSideProps){
+    const characterData:Character = await character(prop.params.id)
     return <div>
-        <h1>Personas de Rick and Morty:</h1>
-        <ul>
-        {charactersData.results.map((character: Characters) => {
-            return <li key={character.id}>
-                {character.name},
-                <a href={`./character/${character.id}.tsx`}>
-                <img class="my-6" src={character.image} alt="Personajes"width="128" height="128"></img>
-                </a>
-                </li>;
-        })}
-        </ul>
+        <h1>{characterData.name}</h1>
+        <h2>{characterData.id}</h2>
+        <h2>{characterData.created}</h2>
+        <img class="my-6" src={characterData.image} alt="Personajes"width="128" height="128"></img>
+
     </div>;
 }

@@ -17,7 +17,7 @@ export async function characters(): Promise<Data> {
 export async function character(id:number):Promise<Character>{
   try{
     const character= await Axios.get<Character>(
-      `https://rickandmortyapi.com/api/character/${id.toString()}`
+      `https://rickandmortyapi.com/api/character/${id}`
     );
     return character.data;
   }catch (err) {
