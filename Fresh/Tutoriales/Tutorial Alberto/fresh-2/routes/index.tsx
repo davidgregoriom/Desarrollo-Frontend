@@ -13,8 +13,8 @@ async function Characters(): Promise<Data> {
   }
 }
 
-export default function Home() {
-  const characters = Characters();
+export default async function Home() {
+  const characters:Data = await Characters();
   return (
     <div>
       <h1>Personas de Rick and Morty:</h1>
