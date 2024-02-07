@@ -3,7 +3,15 @@ export type Characters= {
     name:string;
     image:string;
 }
+export type Page={
+    next:string;
+    prev:string;
+    pages:number;
+    count:number;
+}
+
 export type Data={
+    info:Page;
     results: Characters[];
 }
 
