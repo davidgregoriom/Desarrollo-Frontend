@@ -11,8 +11,9 @@ export type Page={
 }
 
 export type Data={
-    info:Page;
+    info:string;
     results: Characters[];
+    page:Page;
 }
 
 

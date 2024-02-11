@@ -23,7 +23,7 @@ export const handler: Handlers<Data> = {
 };
 
 export default async function  Page (props: PageProps<Data>) {
-  const { results, page } = props.data;
+  const { info,results, page } = props.data;
   return (
     <>
       <h1>Page {page}</h1>
