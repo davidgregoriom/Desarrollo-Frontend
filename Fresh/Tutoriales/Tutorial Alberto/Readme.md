@@ -21,7 +21,7 @@
 - Acceso a datos Server Side con rutas dinámicas.
 - [Video YouTube](https://youtu.be/PNBKeR8wakg)
 
-##### Proyecto
+##### Proyecto #1
 
 ¿Cómo harías una aplicación web en la que puedas ir adelante y atrás por las
 páginas de personajes y al hacer click sobre un personaje vaya a la página de
@@ -30,3 +30,40 @@ ese personaje?
 - Demo: https://fresh-project-1.deno.dev/
 - Solución:
   [GitHub](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-1)
+
+#### Tutorial #4
+
+- _Debuggeando_ el código _server side_
+- [Video YouTube](https://youtu.be/CQChGlGn4qU)
+
+#### Tutorial #5
+
+- Interacción con formularios.
+- [Tutorial Deno](https://fresh.deno.dev/docs/getting-started/form-submissions)
+- [Video YouTube](https://youtu.be/Mp9IwDHrtG4)
+
+##### Proyecto #2
+
+Buscar datos por ciudad o por país y navegar entre ellos
+
+- Demo:https://fresh-project-2.deno.dev/
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-2)
+
+#### Tutorial #6
+
+- Creando componentes funcionales Server Side
+- [Referencia Preact](https://preactjs.com/guide/v10/typescript/#function-components)
+- [Video YouTube](https://youtu.be/chRRjAymCgM)
+
+#### Tutorial #7
+
+- Aplicando estilos
+- [Video YouTube]() - pendiente
+
+##### Proyecto #3
+
+ - Crear un listado con los personajes de la página 1 de Rick&Morty (https://rickandmortyapi.com/api/character)
+ - Aplicar estilos según la demo (usar flex -- para aprender: https://flexboxfroggy.com/#es )
+
+- Demo:https://fresh-project-3.deno.dev/
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-3)
