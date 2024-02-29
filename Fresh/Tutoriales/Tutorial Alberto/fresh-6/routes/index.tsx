@@ -15,7 +15,7 @@ export default async function Home() {
         <h1>Rick and Morty Characters</h1>
         {data.map((character:Character) =>
         (
-          <CharacterData name={character.name} image={character.image} status={character.status} />
+    <CharacterData name={character.name} image={character.image} status={character.status}       />
         ))}
       </div>
     );
