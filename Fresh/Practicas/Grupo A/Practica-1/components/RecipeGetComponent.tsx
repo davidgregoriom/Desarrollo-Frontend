@@ -10,9 +10,10 @@ type RecipeAfterProps = {
 
 
 export default function RecipeComponent(recipe:RecipeAfterProps):FunctionComponent<RecipeAfterProps>{
-    //console.log(recipe);
+    console.log("Rendering component with data:", recipe);
     return(
         <div>
+            <h1>Recipe list</h1>
             <ul>
                 {
                     recipe.recipe && recipe.recipe.map((recipe)=>(

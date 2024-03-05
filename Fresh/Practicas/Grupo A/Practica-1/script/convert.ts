@@ -16,14 +16,15 @@ export default function convert(prop: Data):DataAfter{
         if(object && object.Recipe){
             const new_object = object.Recipe.map((recipe)=>{
                 const {title, ingredients, servings, instructions} = recipe;
-                const recipeAfter: RecipeAfter = {
+                return {
                     title: title,
                     ingredients: ingredients.split("|",ingredients.length),
                     servings: servings,
                     instructions: instructions.split(".",instructions.length)
                 }
-                return recipeAfter;
+
             });
+            console.log(new_object);
             return { Recipe: new_object };
         }else{
             return { Recipe: [] };
