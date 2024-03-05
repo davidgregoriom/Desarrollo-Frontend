@@ -1,0 +1,23 @@
+import { h, useState } from 'preact/hooks';
+import { Airport } from '../types.ts';
+import AirportPostComponent from '../components/AirportPostComponent.tsx';
+import AirportGetComponent from '../components/AirportGetComponent.tsx';
+
+type Data={
+    Airports: Array<Airport>
+}
+
+export default function RecipeIsland(props:Data) {
+    const [data, setData] = useState<Airport>([]);
+    if (props.Airports) {
+      setData(props.Airports);
+    }
+    return (
+        <div class="airport">
+          <AirportPostComponent />
+          {data > 0 && (
+            <AirportGetComponent airport={data} />
+          )}
+        </div>
+    );
+}

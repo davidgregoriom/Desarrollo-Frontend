@@ -1,30 +1,24 @@
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
 import  Axios  from "npm:axios";
 import { Joke } from "../../types.ts";
-import JokesList from "../../components/JokesList.tsx"
+import Jokes from "../../islands/jokes.tsx";
+import JokesList from "../../components/JokesComponent.tsx";
 
 type Data={
   Jokes: Array<Joke>
 }
 
 export const handler: Handlers<Data>={
-  async GET(_req:Request,ctx:FreshContext<Data,unknown>){
+  async GET(_req:Request,ctx:FreshContext<Data>){
     try{
-      const key = Deno.env.get("API_KEY");
-      const url ="https://api.api-ninjas.com/v1/Joke?limit=10";//Algo falla de la url
-      const response= await Axios.get<Data>(url,{
+      const key = Deno.env.get("API_key");
+      const url ="https://api.api-ninjas.com/v1/jokes?limit=10";
+      const response= await Axios.get<unknown, Data>(url,{
           headers: {
             'X-Api-Key': key,
         }})
-      if (response.status !== 200) {
-          console.error(
-            "Error fetching Joke",
-            response.status,
-            response.statusText,
-          );
-          throw new Error("Error fetching Joke");
-      }
-      return ctx.render({response});
+      console.log(response.data);
+      return ctx.render(response.data);
     }catch(error){
       console.log(error);
 
@@ -33,10 +27,13 @@ export const handler: Handlers<Data>={
 }
 
 export default function Home(props:PageProps<Data>) {
+  console.log(props.data);
+  return <JokesList jokes={props.data} />;
+}
 
-  return (
-    <JokesList
-      joke={props.data.response}
-    />
-  );
-  }
+/*
+export default function Home(props:PageProps<Data>) {
+
+  return <Jokes jokes={props.data} />;
+}
+*/

@@ -1,7 +1,13 @@
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
 import  Axios  from "npm:axios";
-import { Airport} from "../../types.ts"
-import AirportComponent from "../../components/AirportComponent.tsx";
+import { Airport} from "../../types.ts";
+import AirportGetComponent from "../../components/AirportGetComponent.tsx";
+import AirportPostComponent from "../../components/AirportPostComponent.tsx";
+import Airportisland from "../../islands/airport.tsx";
+
+type Data={
+  Airports: Array<Airport>
+}
 
 
 export const handler: Handlers={
@@ -27,15 +33,15 @@ export const handler: Handlers={
       console.log(error);
     }
   },*/
-  async POST(req:Request,ctx:FreshContext<Airport>){
+  async POST(req:Request,ctx:FreshContext<Data>){
     try{
       const form= await req.formData();
       const name ={
         name: form.get("name")
       }
-      const key = Deno.env.get("API_KEY");
-      const url =`https://api.api-ninjas.com/v1/airports?name=${name}`;//Algo falla de la url
-      const response= await Axios.get<Airport>(url,{
+      const key = Deno.env.get("API_key");
+      const url =`https://api.api-ninjas.com/v1/airports?name=${name.name}`;//Algo falla de la url
+      const response= await Axios.get<Data>(url,{
           headers: {
             'X-Api-Key': key,
         }})
@@ -47,19 +53,27 @@ export const handler: Handlers={
           );
           throw new Error("Error fetching airports");
       }
-      return ctx.render(response);
+
+      //console.log(response.data);
+      return ctx.render(response.data);
     }catch(error){
       console.log(error)
     }
   }
 }
+export default function Home(props:PageProps<Data>) {
+  return <Airportisland props={props.data} />;
+}
+/*
+export default function Home(props: PageProps<Data>) {
+  return (
+    <div>
+      <AirportPostComponent />
 
-
-
-export default function Home(props:PageProps<Airport>) {
-
-    return (
-      <AirportComponent airport={props.data}/>
-
-    );
-  }
+      {props.data > 0 && (
+        <AirportGetComponent airport={props.data} />
+      )}
+    </div>
+  );
+}
+*/

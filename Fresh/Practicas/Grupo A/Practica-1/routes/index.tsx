@@ -3,9 +3,9 @@
 export default function Home() {
 
   return (
-    <>
-    Hola
-    </>
+    <div>
+      Bienvenido a mi Practica 1, espero que le guste.
+    </div>
 
   );
 }

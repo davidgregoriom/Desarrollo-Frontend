@@ -1,12 +1,15 @@
+export type NavChindreProps ={
+    selected: "Home";
+}
+
 
 export type NavProps ={
     selected: "Airport"|"Jokes"|"Recipe";
 }
 
-export type Joke ={
-    joke:string;
-}
-
+export type Joke = {
+    joke: string;
+};
 
 export type Airport={
     icao:string;

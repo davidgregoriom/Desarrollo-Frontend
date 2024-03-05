@@ -1,18 +1,27 @@
 import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
 import { RecipeBefore } from "../../types.ts";
 import  Axios  from "npm:axios";
-import RecipeComponent from "../../components/RecipeComponent.tsx"
+import RecipePostComponent from "../../components/RecipePostComponent.tsx"
+import RecipeGetComponent from "../../components/RecipeGetComponent.tsx";
+import RecipeIsland from "../../islands/recipe.tsx";
+import convert from "../../script/convert.ts";
+
+
+type Data={
+  Airports: Array<RecipeBefore>
+}
+
 
 export const handler: Handlers={
-  async POST(req:Request,ctx:FreshContext<RecipeBefore>){
+  async POST(req:Request,ctx:FreshContext<Data>){
     try{
       const form= await req.formData();
       const name ={
         name: form.get("name")
       }
-      const key = Deno.env.get("API_KEY");
+      const key = Deno.env.get("API_key");
       const url =`https://api.api-ninjas.com/v1/recipe?query=${name}`;//Algo falla de la url
-      const response= await Axios.get<RecipeBefore>(url,{
+      const response= await Axios.get<Data>(url,{
           headers: {
             'X-Api-Key': key,
         }})
@@ -24,17 +33,32 @@ export const handler: Handlers={
           );
           throw new Error("Error fetching recipe");
       }
-      return ctx.render(response);
+      //console.log(response.data);
+      return ctx.render(response.data);
     }catch(error){
       console.log(error)
     }
   }
 }
+export default function Home(props:PageProps<Data>) {
+  const data = convert(props.data);
+  return (
+    <RecipeIsland props={data} />
+  );
+}
 
 
-export default function Home() {
+
+/*
+export default function Home(props:PageProps<Data>) {
 
     return (
-      <RecipeComponent />
+      <div>
+        <RecipePostComponent />
+        {props.data > 0 && (
+          <RecipeGetComponent recipe={data} />
+        )}
+      </div>
     );
   }
+*/
