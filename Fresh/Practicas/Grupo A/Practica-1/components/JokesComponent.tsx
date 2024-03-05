@@ -6,7 +6,7 @@ type JokesListProps ={
 }
 
 export default function JokesList(jokes: JokesListProps): FunctionComponent<JokesListProps> {
-    console.log(jokes);
+    console.log("Rendering component with data:", jokes);
     return (
         <div class="jokes_container">
             <h1>Jokes list</h1>

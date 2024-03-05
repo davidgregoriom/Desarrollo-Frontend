@@ -14,7 +14,7 @@ export default function AirportGetComponent(airport:Data):FunctionComponent<Data
             <ul>
                 {
                     airport.Airports&& airport.Airports.map((airport)=>(
-                        <>
+                        <div key={airport.id}>
                             <h2>Name:{airport.name}</h2>
                             <li>IATA: {airport.iata}</li>
                             <li>ICAO: {airport.icao}</li>
@@ -24,7 +24,7 @@ export default function AirportGetComponent(airport:Data):FunctionComponent<Data
                             <li>Latitude:{airport.latitude}</li>
                             <li>Longitude:{airport.longitude}</li>
                             <li>Timezone:{airport.timezone}</li>
-                        </>
+                        </div>
                     ))
                 }
             </ul>
