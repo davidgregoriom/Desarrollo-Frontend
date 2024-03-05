@@ -6,6 +6,7 @@
     align-items: center;
     height: 35vh;
     background-color: #f0f0f0;
+    flex-direction: column;
     text-align: center;
     padding: 2px;
     border-radius: 10px;

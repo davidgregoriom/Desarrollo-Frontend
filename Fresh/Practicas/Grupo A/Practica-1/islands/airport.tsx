@@ -8,16 +8,16 @@ type Data={
 }
 
 export default function RecipeIsland(props:Data) {
-    const [data, setData] = useState<Airport>([]);
-    if (props.Airports) {
-      setData(props.Airports);
-    }
-    return (
-        <div class="airport">
-          <AirportPostComponent />
-          {data > 0 && (
-            <AirportGetComponent airport={data} />
-          )}
-        </div>
-    );
+
+  const [data, setData] = useState<Airport[]>([]);
+
+  if (props) {
+    setData(props);
+  }
+  return (
+      <div class="airport">
+        <AirportPostComponent />
+        <AirportGetComponent airport={data} />
+      </div>
+  );
 }

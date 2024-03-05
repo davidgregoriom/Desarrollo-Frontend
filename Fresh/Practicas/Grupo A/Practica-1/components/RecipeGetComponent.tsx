@@ -10,12 +10,12 @@ type RecipeAfterProps = {
 
 
 export default function RecipeComponent(recipe:RecipeAfterProps):FunctionComponent<RecipeAfterProps>{
-    console.log(recipe);
+    //console.log(recipe);
     return(
         <div>
             <ul>
                 {
-                    recipe.recipe.map((recipe)=>(
+                    recipe.recipe && recipe.recipe.map((recipe)=>(
                         <div key={recipe.id}>
                             <h2>Title:{recipe.title}</h2>
                             <li>Ingredients: {recipe.ingredients.map((ingredient)=>{

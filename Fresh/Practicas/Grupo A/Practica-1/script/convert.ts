@@ -9,19 +9,28 @@ type DataAfter={
 
 
 
-export default function convert(prop: Data|undefined):DataAfter{
-
-    const object = prop?.Recipe ?? [];
-    const new_object= object.map((recipe)=>{
-        const {title, ingredients, servings, instructions} = recipe;
-        const recipeAfter: RecipeAfter = {
-            title: title,
-            ingredients: ingredients.split("|",ingredients.length),
-            servings: servings,
-            instructions: instructions.split(".",instructions.length)
+export default function convert(prop: Data):DataAfter{
+    try{
+        const object:Data = prop || {Recipe: []};
+        //console.log(object);
+        if(object && object.Recipe){
+            const new_object = object.Recipe.map((recipe)=>{
+                const {title, ingredients, servings, instructions} = recipe;
+                const recipeAfter: RecipeAfter = {
+                    title: title,
+                    ingredients: ingredients.split("|",ingredients.length),
+                    servings: servings,
+                    instructions: instructions.split(".",instructions.length)
+                }
+                return recipeAfter;
+            });
+            return { Recipe: new_object };
+        }else{
+            return { Recipe: [] };
         }
-       return recipeAfter;
-    });
-    return { Recipe: new_object };
+    }catch(e){
+        console.log(e);
+        return { Recipe: [] };
+    }
 }
 

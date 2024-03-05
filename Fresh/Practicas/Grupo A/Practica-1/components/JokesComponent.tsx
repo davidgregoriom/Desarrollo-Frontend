@@ -8,11 +8,11 @@ type JokesListProps ={
 export default function JokesList(jokes: JokesListProps): FunctionComponent<JokesListProps> {
     console.log(jokes);
     return (
-        <div>
+        <div class="jokes_container">
             <h1>Jokes list</h1>
             <ul class="jokes">
                 {jokes.jokes.map((joke) => (
-                    <li key={joke.joke}>{joke.joke}</li>
+                    <li class="chiste" key={joke.joke}>{joke.joke}</li>
                 ))}
             </ul>
         </div>

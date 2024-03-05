@@ -8,7 +8,7 @@ import convert from "../../script/convert.ts";
 
 
 type Data={
-  Airports: Array<RecipeBefore>
+  Recipe: Array<RecipeBefore>
 }
 
 
@@ -42,8 +42,9 @@ export const handler: Handlers={
 }
 export default function Home(props:PageProps<Data>) {
   const data = convert(props.data);
+  //console.log(data);
   return (
-    <RecipeIsland props={data} />
+    <RecipeIsland prop={data} />
   );
 }
 

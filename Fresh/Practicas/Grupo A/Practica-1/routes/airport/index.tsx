@@ -53,8 +53,6 @@ export const handler: Handlers={
           );
           throw new Error("Error fetching airports");
       }
-
-      //console.log(response.data);
       return ctx.render(response.data);
     }catch(error){
       console.log(error)

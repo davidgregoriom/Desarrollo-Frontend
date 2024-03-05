@@ -2,7 +2,6 @@ export type NavChindreProps ={
     selected: "Home";
 }
 
-
 export type NavProps ={
     selected: "Airport"|"Jokes"|"Recipe";
 }

@@ -7,15 +7,17 @@ type Data={
     Recipe: Array<RecipeAfter>
 }
 
-export default function RecipeIsland(props:Data) {
-    const [data, setData] = useState<RecipeAfter>([]);
+export default function RecipeIsland(prop:Data) {
+    /*
+    const [data, setData] = useState<RecipeAfter[]>([]);
     if (props.Recipe) {
       setData(props.Recipe);
     }
+    */
     return (
     <div class="recipe">
         <RecipePostComponent />
-        <RecipeGetComponent recipe={data} />
+        <RecipeGetComponent recipe={prop.Recipe} />
     </div>
     );
 }
