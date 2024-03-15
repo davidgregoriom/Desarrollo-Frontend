@@ -5,16 +5,10 @@
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
-import * as $airport_layout from "./routes/airport/_layout.tsx";
-import * as $airport_index from "./routes/airport/index.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $jokes_layout from "./routes/jokes/_layout.tsx";
-import * as $jokes_index from "./routes/jokes/index.tsx";
-import * as $recipe_layout from "./routes/recipe/_layout.tsx";
-import * as $recipe_index from "./routes/recipe/index.tsx";
-import * as $airport from "./islands/airport.tsx";
-import * as $jokes from "./islands/jokes.tsx";
-import * as $recipe from "./islands/recipe.tsx";
+import * as $linkedin_layout from "./routes/linkedin/_layout.tsx";
+import * as $linkedin_index from "./routes/linkedin/index.tsx";
+import * as $linkedin from "./islands/linkedin.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -22,18 +16,12 @@ const manifest = {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
-    "./routes/airport/_layout.tsx": $airport_layout,
-    "./routes/airport/index.tsx": $airport_index,
     "./routes/index.tsx": $index,
-    "./routes/jokes/_layout.tsx": $jokes_layout,
-    "./routes/jokes/index.tsx": $jokes_index,
-    "./routes/recipe/_layout.tsx": $recipe_layout,
-    "./routes/recipe/index.tsx": $recipe_index,
+    "./routes/linkedin/_layout.tsx": $linkedin_layout,
+    "./routes/linkedin/index.tsx": $linkedin_index,
   },
   islands: {
-    "./islands/airport.tsx": $airport,
-    "./islands/jokes.tsx": $jokes,
-    "./islands/recipe.tsx": $recipe,
+    "./islands/linkedin.tsx": $linkedin,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;
