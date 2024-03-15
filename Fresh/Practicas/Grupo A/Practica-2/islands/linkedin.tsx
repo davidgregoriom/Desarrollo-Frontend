@@ -21,7 +21,7 @@ export default function LinkedInIsland(props:Data) {
     <div>
       <div>
         <LinkedInListComponent job={jobs}/>
-        <NavComponent page={page}/>
+        <NavComponent page={page} />
       </div>
       <div>
         <LinkedInDescriptionComponent job={select}/>

@@ -1,4 +1,4 @@
-import { h, useState } from 'preact/hooks';
+import { h, useState ,dangerouslySetInnerHTML} from 'preact/hooks';
 import { FunctionComponent } from "preact";
 import { job } from "../types.ts"
 
@@ -15,6 +15,10 @@ export default function LinkedInDescriptionComponent(job:Data):FunctionComponent
                 <li>{job.job.company_name}</li>
                 <li>{job.job.location}</li>
                 <li>{job.job.remote}</li>
+                <a href={job.job.url}>Solicitud</a>
+                <dangerouslySetInnerHTML>{job.job.description}</dangerouslySetInnerHTML>
+                <li>{job.job.tags}</li>
+                <li>{job.job.job_types}</li>
             </ul>
         </div>
     );

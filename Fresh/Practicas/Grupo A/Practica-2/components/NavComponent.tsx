@@ -6,10 +6,10 @@ export default function NavComponent(props:number):FuntionComponent{
 
     return (
         <div>
-            <button disabled={props === 0} onClick={() => setNumber(props - 1)}>
+            <button disabled={props === 0} onClick={() => {return(props - 1)}}>
                 Prev
             </button>
-            <button onClick={() => setNumber(props + 1)}>
+            <button onClick={() =>{ return(props + 1)}}>
                 Next
             </button>
         </div>

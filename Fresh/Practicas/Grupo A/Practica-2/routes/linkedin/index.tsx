@@ -6,7 +6,7 @@ import LinkedInIsland from "../../islands/linkedin.tsx"
 type Data={
   linkedin:linkedin
 }
-
+//CAMBIAR NOMBRE DE LA CARPETA
 export const handler: Handlers={
   async GET(req:Request,ctx:FreshContext<Data>){
     try{

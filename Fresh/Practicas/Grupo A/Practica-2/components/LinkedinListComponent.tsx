@@ -12,11 +12,11 @@ export default function LinkedInListComponent(jobs:Data): FunctionComponent{
             <ul>
                 {
                     jobs.job.map(job=>{
-                        <button key={job.slug}  onClick={() =>}>
+                        <button key={job.slug}  onClick={(job) =>{return(job)}}>
                             <h2>{job.title}</h2>
                             <li>{job.company_name}</li>
                             <li>{job.location}</li>
-                            <button>x</button>
+                            <button onClick={(job) =>{return(job)}}>x</button>
                         </button>
                     })
                 }
