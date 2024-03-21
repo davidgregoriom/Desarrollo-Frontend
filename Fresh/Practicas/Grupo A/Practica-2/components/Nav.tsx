@@ -1,17 +1,13 @@
-import { FuntionComponent} from "preact";
+import { FunctionComponent} from "preact";
 import { NavProps } from "../types.ts";
 
 
-export default function Nav(selected:NavProps):FuntionComponent<NavProps>{
+export default function Nav(selected:NavProps):FunctionComponent<NavProps>{
 
     return (
-        <nav class="nav">
-            <a href="/linkedin" class={selected === "LinkedIn" ? "selected" : ""}>
-                LinkedIn
-            </a>
-        </nav>
-
+        <div class="nav">
+            Navegador
+        </div>
     )
 
 }
-

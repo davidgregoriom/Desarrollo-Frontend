@@ -7,7 +7,7 @@ type Data={
 }
 
 export default function LinkedInDescriptionComponent(job:Data):FunctionComponent<Data>{
-    console.log("Rendering component with data:", job);
+    //console.log("Rendering component with data:", job);
     return (
         <div>
             <h1>{job.job.title}</h1>
@@ -15,7 +15,8 @@ export default function LinkedInDescriptionComponent(job:Data):FunctionComponent
                 <li>{job.job.company_name}</li>
                 <li>{job.job.location}</li>
                 <li>{job.job.remote}</li>
-                <a href={job.job.url}>Solicitud</a>
+                <button class="button-blue" href={job.job.url}>Solicitar</button>
+                <button class="button-white" onClick={() => {console.log("Clicked")}}>Guardar</button>
                 <dangerouslySetInnerHTML>{job.job.description}</dangerouslySetInnerHTML>
                 <li>{job.job.tags}</li>
                 <li>{job.job.job_types}</li>

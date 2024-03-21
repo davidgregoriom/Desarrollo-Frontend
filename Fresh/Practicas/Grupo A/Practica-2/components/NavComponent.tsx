@@ -1,8 +1,8 @@
-import { FuntionComponent} from "preact";
+import { FunctionComponent} from "preact";
 
 
 
-export default function NavComponent(props:number):FuntionComponent{
+export default function NavComponent(props:number):FunctionComponent{
 
     return (
         <div>

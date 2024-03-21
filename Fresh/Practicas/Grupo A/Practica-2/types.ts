@@ -19,16 +19,16 @@ export type job={
     description:string;
     remote:boolean;
     url:string;
-    tags:string[];
-    job_types:string[];
+    tags?:(string | null)[] | null;
+    job_types?:(string | null)[] | null;
     location:string;
     created_at:number;
 }
 
 export type links={
     first:string;
-    last:string;
-    prev:string;
+    last?:string;
+    prev?:string;
     next:string;
 }
 
@@ -41,3 +41,5 @@ export type meta={
     terms:string;
     info:string;
 }
+
+

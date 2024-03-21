@@ -1,0 +1,17 @@
+.island_list{
+    margin: 10px 20px 15px 25px;
+    padding: 10px;
+    width: 70%;
+    height: 50%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}
+
+.island_description{
+    margin: 10px 20px 15px 25px;
+    padding: 10px;
+    width: 70%;
+    height: 50%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+}

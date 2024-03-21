@@ -5,13 +5,16 @@ type Data={
     job: job[]
 }
 
-export default function LinkedInListComponent(jobs:Data): FunctionComponent{
+export default function LinkedInListComponent(jobs:any): FunctionComponent{
+    //console.log(jobs);
+
     return(
-        <div>
-            <h1>Empleos Recomendados</h1>
+        <div class="list">
+            <h1>Principales empleos que te recomendamos</h1>
+            {/*
             <ul>
                 {
-                    jobs.job.map(job=>{
+                    jobs.map(job=>{
                         <button key={job.slug}  onClick={(job) =>{return(job)}}>
                             <h2>{job.title}</h2>
                             <li>{job.company_name}</li>
@@ -21,7 +24,10 @@ export default function LinkedInListComponent(jobs:Data): FunctionComponent{
                     })
                 }
             </ul>
+              */  }
         </div>
     )
+
 }
+
 
