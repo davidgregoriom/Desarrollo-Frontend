@@ -11,9 +11,9 @@ export default function LinkedInListComponent(jobs:any): FunctionComponent{
     return(
         <div class="list">
             <h1>Principales empleos que te recomendamos</h1>
-            {/*
-            <ul>
-                {
+
+            <ul class="list_ul">
+                {/*
                     jobs.map(job=>{
                         <button key={job.slug}  onClick={(job) =>{return(job)}}>
                             <h2>{job.title}</h2>
@@ -22,9 +22,9 @@ export default function LinkedInListComponent(jobs:any): FunctionComponent{
                             <button onClick={(job) =>{return(job)}}>x</button>
                         </button>
                     })
-                }
+                */}
             </ul>
-              */  }
+
         </div>
     )
 

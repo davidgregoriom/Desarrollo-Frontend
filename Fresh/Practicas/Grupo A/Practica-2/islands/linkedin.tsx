@@ -17,7 +17,6 @@ export default function LinkedInIsland(props:Data) {
   const [page,setPage]=useState<number>(1);
 
   const [jobs, setJobs] = useState<job[] | null>(null);
-  console.log(data);
   console.log("Data.data:", data.data);
   useEffect(() => {
     if (data) {
@@ -30,7 +29,7 @@ export default function LinkedInIsland(props:Data) {
   return(
     <div class="linkedin">
       <div class="island_list">
-        <LinkedInListComponent job={data.data}/>
+        <LinkedInListComponent job={jobs}/>
         <NavComponent page={page} />
         <Footer/>
       </div>

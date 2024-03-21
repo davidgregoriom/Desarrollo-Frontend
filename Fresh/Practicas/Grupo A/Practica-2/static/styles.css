@@ -76,3 +76,17 @@ body {
   font-size: 16px;
   margin: 10px;
 }
+
+.button-page{
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 35%;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px;
+}
