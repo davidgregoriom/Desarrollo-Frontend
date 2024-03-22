@@ -5,7 +5,7 @@ type Data={
     job: job[]
 }
 
-export default function LinkedInListComponent(jobs:any): FunctionComponent{
+export default function LinkedInListComponent(jobs:Data): FunctionComponent{
     //console.log(jobs);
 
     return(
