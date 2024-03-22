@@ -1,4 +1,4 @@
-import { FreshContext, Handlers, PageProps } from "$fresh/server.ts";
+import { FreshContext,Handlers,PageProps } from "$fresh/server.ts";
 import  Axios  from "npm:axios";
 import { job,linkedin,meta,links} from "../types.ts"
 import LinkedInIsland from "../islands/linkedin.tsx"
