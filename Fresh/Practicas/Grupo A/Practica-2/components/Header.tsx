@@ -17,13 +17,13 @@ export default function Header(): FunctionComponent {
             <input className="input" type="text" name="name" placeholder="Buscar por cargo, puesto, ..." />
             <input className="input" type="text" name="city" placeholder="Ciudad, pueblo, ..." />
             <button className="button-white" type="submit">Buscar</button>
-            <img src={asset("/../static/img/linkedin.png")} />
-            <img src={asset("/../static/img/linkedin.png")} />
-            <img src={asset("/../static/img/linkedin.png")} />
-            <img src={asset("/../static/img/linkedin.png")} />
-            <img src={asset("/../static/img/linkedin.png")} />
-            <img src={asset("/../static/img/linkedin.png")} />
-            <img src={asset("/../static/img/linkedin.png")} />
+            <img src={asset("/../static/img/linkedin_home.jpg")} />
+            <img src={asset("/../static/img/linkedin_people.jpg")} />
+            <img src={asset("/../static/img/linkedin_jobs.jpg")} />
+            <img src={asset("/../static/img/linkedin_chat.jpg")} />
+            <img src={asset("/../static/img/linkedin_alert.jpg")} />
+            <img src={asset("/../static/img/linkedin_user.jpg")} />
+            <img src={asset("/../static/img/linkedin_moreoptions.jpg")} />
             <a href="https://www.linkedin.com/premium/survey/?destRedirectURL=https%3A%2F%2Fwww.linkedin.com%2Fjobs%2Fcollections%2Frecommended%2F%3FcurrentJobId%3D3842836572%26discover%3Drecommended%26discoveryOrigin%3DJOBS_HOME_JYMBII%26start%3D168&referenceId=4HMvCrVSS82hdGDFV%2FPo0w%3D%3D&upsellOrderOrigin=premium_nav_upsell_text&utype=job">Prueba Premium</a>
         </header>
     );
