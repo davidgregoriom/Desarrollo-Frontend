@@ -2,6 +2,8 @@
     display: flex;
     background-color: rgb(255, 255, 255);
     li{
+        color: black;
+        justify-content: space-between;
 
 
     }
