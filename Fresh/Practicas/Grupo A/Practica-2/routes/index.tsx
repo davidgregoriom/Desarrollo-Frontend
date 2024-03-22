@@ -13,7 +13,9 @@ export const handler: Handlers={
       const response= await Axios.get<Data>(`https://www.arbeitnow.com/api/job-board-api`);
       const linkedin=response.data;
       //console.log(linkedin);
+
       return ctx.render({linkedin});
+
     }catch(error){
       console.log(error);
 
@@ -22,6 +24,7 @@ export const handler: Handlers={
 }
 
 export default function Home(props:PageProps<Data>) {
+  console.log(props.data.links)
   //console.log(props.data);
   return <LinkedInIsland linkedin={props.data} />;
   //return <div>Hola</div>;

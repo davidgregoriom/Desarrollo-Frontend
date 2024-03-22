@@ -17,10 +17,10 @@ export default function LinkedInIsland(props:Data) {
   const [page,setPage]=useState<number>(1);
 
   const [jobs, setJobs] = useState<job[] | null>(null);
-  console.log("Data.data:", data.data);
+
   useEffect(() => {
     if (data) {
-      console.log("Data.data:", data.data);
+      //console.log("Data.data:", data.data);
       setJobs(data.data);
     }
   }, [data]);
