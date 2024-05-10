@@ -7,7 +7,7 @@ export type User={
     id:number,
     name:string,
     username:string,
-    created_at:Date //Mirar si es date o string- Ejemplo: "2021-01-11T00:00:00.000Z"
+    created_at:string
 }
 
 export type Pokemon={

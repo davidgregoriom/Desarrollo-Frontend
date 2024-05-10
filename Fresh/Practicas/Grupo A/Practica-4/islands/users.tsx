@@ -1,25 +1,29 @@
-import { useSignal } from "@preact/signals";
+import { Signal, useSignal } from "@preact/signals";
 import { useEffect, useState } from "preact/hooks";
 import { FunctionComponent } from "preact";
 import Users from "../components/userComponent.tsx"
 import { User } from "../types.ts";
+import Button from "../components/Button.tsx";
 
-export default function Page(): FunctionComponent {
-  const [User, setUser] = useState<String>("");
-  const [PageUser,setPageUser]=useState<Number>(1);
-  const [ListUser,setListUser]=useState<[User]>([]);
+export default function Page(number:number){
+  const [User, setUser] = useState<string>("");
+  //const [PageUser,setPageUser]=useState<Number>(1);
+  const [ListUser,setListUser]=useState<Array<User>>([]);
+  const PageUser = useSignal(number);
 
   useEffect(() => {
     fetchCharacter(PageUser,User);
   }, [PageUser,User]);
 
-  // fetch character with id from Rick and Morty API
-  const fetchCharacter = async (page:number,User:string) => {
+  const fetchCharacter = async (page:Signal<number>,User:string) => {
     console.log(page)
     const response = await fetch(
       `https://fernandomur-random-data-72.deno.dev/Users?query=${User}&page=${page}`,
     );
     const data = await response.json();
+    const datta = await data.json();
+    debugger;
+    console.log(Object.keys(datta));
     setListUser(data);
   };
   return (
@@ -28,11 +32,14 @@ export default function Page(): FunctionComponent {
       value={User}
       onInput={(e) => setUser(e.currentTarget.value)} placeholder="Buscar">
       </input>
-      <Users class="details" Users={ListUser}/>
-      <div class="button">
-        <button onClick={(e) => PageUser.value = PageUser.value - 1}>Anterior</button>
-        <button onClick={(e) => PageUser.value = PageUser.value + 1}>Siguiente</button>
+      <Users class="details" User={ListUser}/>
+      <Button/>
+      {
+      /*<div class="button">
+        <button onClick={(e) => PageQuotes.value = PageQuotes.value - 1}>Anterior</button>
+        <button onClick={(e) => PageQuotes.value = PageQuotes.value + 1}>Siguiente</button>
       </div>
+      */}
     </div>
   );
 }

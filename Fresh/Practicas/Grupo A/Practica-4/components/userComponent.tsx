@@ -1,23 +1,26 @@
 import { Signal } from "@preact/signals";
 import { FunctionComponent } from "preact";
-import { Pokemon } from "../types.ts";
+import { User } from "../types.ts";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 
-const Pokemons: FunctionComponent<{ Pokemons: Signal<Pokemon[]> }> = ({ Pokemons }) => {
-    if (IS_BROWSER){
+const Userss: FunctionComponent<{ Users }> = ({ Users }) => {
+    //console.log(Object.keys(Users));
+    if(!Users||Users.length==0){
+        return <div class="details">No se ha encontrado Users</div>
+    }else{
         return(
-                Pokemons.map((e:Pokemon)=>(
-                    <li>
-                        <div>{e.id}</div>
-                        <div>{e.name}</div>
-                        <div>{e.type}</div>
-                        <div>{e.base_experience}</div>
-                    </li>
-                ))
+            Users.map((e:User)=>(
+                <li class="details">
+                    <div>{e.id}</div>
+                    <div>{e.name}</div>
+                    <div>{e.username}</div>
+                    <div>{e.created_at}</div>
+                </li>
+            ))
         )
-    }else return <div>No se ha encontrado Pokemons</div>
+    }
 
 
 };
 
-export default Pokemons;
+export default Userss;

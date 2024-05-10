@@ -13,8 +13,11 @@ export const handler: Handlers={
       const response= await Axios.get<Data>(`https://www.arbeitnow.com/api/job-board-api`);
       const linkedin=response.data;
       //console.log(linkedin);
-
-      return ctx.render({linkedin});
+      const links:links= linkedin.linkedin.links;
+      const meta:meta= linkedin.linkedin.meta;
+      const data:job[]= linkedin.linkedin.data;
+      console.log(data);
+      return ctx.render(links,meta,data,{linkedin:linkedin});
 
     }catch(error){
       console.log(error);

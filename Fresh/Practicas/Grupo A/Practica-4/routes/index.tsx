@@ -6,10 +6,10 @@ import Users from "../islands/users.tsx"
 export default function Home() {
   return (
   <div class="principal">
-    <Pokemon/>
+    <Pokemon number={1}/>
     <div class="secondsComponents">
-      <Quotes/>
-      <Users/>
+      <Quotes  number={1}/>
+      <Users  number={1}/>
     </div>
   </div>
   )

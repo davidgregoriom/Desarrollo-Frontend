@@ -58,12 +58,41 @@ Buscar datos por ciudad o por país y navegar entre ellos
 #### Tutorial #7
 
 - Aplicando estilos
-- [Video YouTube]() - pendiente
+- [Video YouTube](https://youtu.be/TjNR1YkXWUo)
 
 ##### Proyecto #3
 
- - Crear un listado con los personajes de la página 1 de Rick&Morty (https://rickandmortyapi.com/api/character)
- - Aplicar estilos según la demo (usar flex -- para aprender: https://flexboxfroggy.com/#es )
-
+- Crear un listado con los personajes de la página 1 de Rick&Morty (https://rickandmortyapi.com/api/character)
+- Aplicar estilos según la demo (usar flex -- para aprender: https://flexboxfroggy.com/#es )
 - Demo:https://fresh-project-3.deno.dev/
 - Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-3)
+
+#### Tutorial #8
+
+- Layouts
+- [Video YouTube](https://youtu.be/U3L7gFi9doE)
+
+##### Proyecto #4
+
+- Agenda de contactos
+- La demo carece de funcionalidad que debe añadir el alumno. Se añadirá la funcionalidad completa tras la clase
+- Demo:https://fresh-project-4.deno.dev/
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-4)
+
+#### Tutorial 9
+
+- Renderizado en el cliente
+- [Documentacíon Fresh](https://fresh.deno.dev/docs/concepts/islands)
+- Hook de estado
+- [Documentacíon Preact](https://preactjs.com/guide/v10/hooks/#usestate)
+- [Video Youtube](https://youtu.be/Rs9lJC_w6Go)
+
+#### Tutorial 10
+- Validación de formularios en el cliente
+- [Video Youtube](https://youtu.be/TEVAO8tqjvM)
+
+##### Proyecto #5
+
+- Añadir contacto con validación de datos
+- Llamada a API desde cliente
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-5)
