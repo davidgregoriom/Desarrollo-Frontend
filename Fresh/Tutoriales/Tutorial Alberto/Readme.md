@@ -96,3 +96,59 @@ Buscar datos por ciudad o por país y navegar entre ellos
 - Añadir contacto con validación de datos
 - Llamada a API desde cliente
 - Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-5)
+
+#### Tutorial 11
+ - Llamadas a API desde cliente
+ - [Video Youtube](https://youtu.be/ueXKTdEf2dg)
+
+ ##### Proyecto #6
+
+- Mostrar datos API client side con API server side
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-6)
+
+##### Examen Parcial 1
+
+- Agenda Client Side
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/examenes/2324/parcial/grupo-A)
+
+##### Examen Parcial 2
+
+- Diccionario Client Side
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/examenes/2324/parcial/grupo-B)
+
+#### Tutorial 12
+ - Compartiendo estado entre componentes hermanos
+ - [Video Youtube](https://youtu.be/RTbhoE7uNhU)
+
+##### Proyecto #7
+
+- Agenda de contactos
+- Demo en Deno Deploy https://fresh-project-7.deno.dev/
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-7)
+
+#### Tutorial 13
+ - Hook de efecto (useEffect)
+ - [Video Youtube](https://youtu.be/NE6_lZ4ApV0)
+
+##### Proyecto #8
+
+- Tienda Client Side
+- Demo en Deno Deploy https://fresh-project-8.deno.dev/
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-8)
+
+
+##### Proyecto #9
+
+- Tienda Server Side
+- Demo en Deno Deploy https://fresh-project-9.deno.dev/
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-9)
+
+
+#### Tutorial 14
+ - Cookies Server Side
+ - [Video Youtube](https://youtu.be/rj_eXlOS_Ho)
+
+##### Proyecto #10
+
+- Tienda Server Side (con cookies server side)
+- Solución:[Github](https://github.com/Nebrija-Programacion/web-frontend/tree/master/tutorial/project-10)
