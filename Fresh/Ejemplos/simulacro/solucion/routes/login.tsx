@@ -2,7 +2,7 @@ import {
   FreshContext,
   Handlers,
   PageProps,
-  RouteConfig,
+  RouteConfig
 } from "$fresh/server.ts";
 import jwt from "jsonwebtoken";
 import Login from "../components/Login.tsx";

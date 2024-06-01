@@ -5,3 +5,9 @@ export type User ={
     password:string;
     fav:string[];
 }
+
+export type register ={
+    name:string;
+    email:string;
+    password:string;
+}

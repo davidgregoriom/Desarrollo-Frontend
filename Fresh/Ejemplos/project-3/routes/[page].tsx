@@ -7,20 +7,20 @@ type Data = CharacterResponse & {page:string};
 
 export const handler: Handlers<Data> ={
   async GET(_req:Request,ctx:FreshContext<unknown,Data>){
-    try{
-        const {page}= ctx.params;
-        const response = await Axios.get<CharacterResponse>(
-          `https://rickandmortyapi.com/api/character?page=${page}`,
-        )
-        if (response.status !== 200) {
-            console.error(
-              "Error fetching characters",
-              response.status,
-              response.statusText,
-            );
-            throw new Error("Error fetching characters");
-        }
-        return ctx.render({...response.data,page});
+  try{
+      const {page}= ctx.params;
+      const response = await Axios.get<CharacterResponse>(
+        `https://rickandmortyapi.com/api/character?page=${page}`,
+      )
+      if (response.status !== 200) {
+          console.error(
+            "Error fetching characters",
+            response.status,
+            response.statusText,
+          );
+          throw new Error("Error fetching characters");
+      }
+      return ctx.render({...response.data,page});
 
     }catch(err){
         console.error(

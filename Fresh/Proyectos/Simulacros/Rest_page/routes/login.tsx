@@ -1,8 +1,9 @@
 import { RouteConfig, Handlers, FreshContext,PageProps } from "$fresh/server.ts";
-import { User } from "../types.ts";
+import { User,register } from "../types.ts";
 import jwt from "jsonwebtoken";
 import { setCookie } from "$std/http/cookie.ts";
 import Login from "../components/Login.tsx";
+import UserModel from "../db/Resgiter.ts";
 
 
 const config:RouteConfig ={
@@ -29,27 +30,18 @@ export const handler:Handlers ={
                 return new Error("JWT_SECRET is not defined");
             }
 
-            const response  = await fetch(
-                `${Deno.env.get("API_URL")}/checkuser`,{
-                method:"POST",
-                headers:{
-                    "Content-Type":"application/json"
-                },
-                body:JSON.stringify({email,password})
-            });
+            const response  = await UserModel.findOne({email,password}).exec();
 
-            if(response.status== 404){
+            if(!response){
                 return ctx.render({
                     message:"Incorrect"
                 })
             }
-            if(response.status==200){
-                const data: Omit<User, "password"| "favs"> =await response.json()
+            if(response){
                 const token = jwt.sign(
                     {
-                        email,
-                        id:data.id,
-                        name:data.name
+                        email:response.email,
+                        name:response.name,
                     },
                     Deno.env.get("JWT_SECRET"),
                     {

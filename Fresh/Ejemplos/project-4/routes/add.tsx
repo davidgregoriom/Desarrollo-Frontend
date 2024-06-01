@@ -3,7 +3,7 @@ import AddForm from "../components/AddForm.tsx";
 import ContactModel from "../db/Contact.ts";
 
 export const handler: Handlers = {
-  POST: async (req: Request, ctx: FreshContext) => {
+  POST: async (req: Request, _ctx: FreshContext) => {
     try {
       const form = await req.formData();
       const data = {
