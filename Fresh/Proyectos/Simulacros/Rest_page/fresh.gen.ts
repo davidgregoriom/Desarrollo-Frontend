@@ -6,16 +6,18 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $_middleware from "./routes/_middleware.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
+import * as $api_index from "./routes/api/index.ts";
+import * as $api_logo_name_ from "./routes/api/logo/[name].ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $login from "./routes/login.tsx";
-import * as $logo_id_ from "./routes/logo/[id].tsx";
 import * as $logo_index from "./routes/logo/index.tsx";
 import * as $planets_id_ from "./routes/planets/[id].tsx";
 import * as $planets_index from "./routes/planets/index.tsx";
 import * as $register from "./routes/register.tsx";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $Login from "./islands/Login.tsx";
+import * as $Logo from "./islands/Logo.tsx";
 import * as $Logout from "./islands/Logout.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
@@ -25,11 +27,11 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
     "./routes/_middleware.tsx": $_middleware,
-    "./routes/api/joke.ts": $api_joke,
+    "./routes/api/index.ts": $api_index,
+    "./routes/api/logo/[name].ts": $api_logo_name_,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/login.tsx": $login,
-    "./routes/logo/[id].tsx": $logo_id_,
     "./routes/logo/index.tsx": $logo_index,
     "./routes/planets/[id].tsx": $planets_id_,
     "./routes/planets/index.tsx": $planets_index,
@@ -37,6 +39,8 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
+    "./islands/Login.tsx": $Login,
+    "./islands/Logo.tsx": $Logo,
     "./islands/Logout.tsx": $Logout,
   },
   baseUrl: import.meta.url,

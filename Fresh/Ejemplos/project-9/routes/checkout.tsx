@@ -7,7 +7,7 @@ type CountryResponse = {
 };
 
 export const handler: Handlers = {
-  GET: async (_req, ctx: FreshContext<unknown, { countries: Country[] }>) => {
+  GET: async (_req:Request, ctx: FreshContext<unknown, { countries: Country[] }>) => {
     const response = await fetch(
       "https://api.first.org/data/v1/countries?region=europe"
     );

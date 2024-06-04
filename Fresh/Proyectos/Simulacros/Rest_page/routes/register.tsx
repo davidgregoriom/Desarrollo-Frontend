@@ -1,4 +1,4 @@
-import { RouteConfig,Handlers,FreshContext } from "$fresh/server.ts";
+import { RouteConfig,Handlers,FreshContext,PageProps } from "$fresh/server.ts";
 import jwt from "jsonwebtoken";
 import { setCookie } from "$std/http/cookie.ts";
 import UserModel from "../db/Resgiter.ts";
@@ -34,7 +34,7 @@ export const handler:Handlers ={
                 if(!JWT_SECRET){
                     return new Error("JWT_SECRET is not defined");
                 }
-                const token = jwt.sing({
+                const token = jwt.sign({
                     email,
                     name,
                 },JWT_SECRET,{
@@ -61,4 +61,8 @@ export const handler:Handlers ={
             throw new Error(e);
         }
     }
+}
+
+export default function Page(){
+    return <Register />
 }

@@ -1,7 +1,8 @@
 //https://api-ninjas.com/api/logo
-import {Handlers,FreshContext } from "$fresh/server.ts";
-import {Logo} from "../types.ts";
-
+import {Handlers,FreshContext,PageProps } from "$fresh/server.ts";
+//import {Logo} from "../../types.ts";
+import Logo from "../../islands/Logo.tsx"
+/*
 type Data={
     logos:Logo[];
 }
@@ -9,6 +10,11 @@ type Data={
 
 export const hadler:Handlers<Data>={
     GET:async(req:Request,ctx:FreshContext<Data>)=>{
-        const url = new URL
+        const url = new URL(req.url);
+
     }
+}
+*/
+export default function Page(){
+    return <Logo/>
 }

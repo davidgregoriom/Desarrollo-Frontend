@@ -54,7 +54,7 @@ export const handler: Handlers = {
       const data: Omit<User, "password" | "favs"> = await response.json();
       const token = jwt.sign(
         {
-          email,
+          email: data.email,
           id: data.id,
           name: data.name,
         },

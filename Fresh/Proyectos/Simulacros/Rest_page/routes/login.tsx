@@ -1,5 +1,5 @@
 import { RouteConfig, Handlers, FreshContext,PageProps } from "$fresh/server.ts";
-import { User,register } from "../types.ts";
+import { register } from "../types.ts";
 import jwt from "jsonwebtoken";
 import { setCookie } from "$std/http/cookie.ts";
 import Login from "../components/Login.tsx";
