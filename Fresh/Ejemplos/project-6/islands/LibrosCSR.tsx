@@ -11,6 +11,7 @@ const LibrosCSR: FunctionComponent = () => {
       throw new Error("Error fetching books");
     }
     const data = await response.json();
+    debugger;
     setBooks(data);
   };
   return (

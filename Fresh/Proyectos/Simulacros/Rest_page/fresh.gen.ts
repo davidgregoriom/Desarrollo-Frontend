@@ -11,6 +11,7 @@ import * as $api_logo_name_ from "./routes/api/logo/[name].ts";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $login from "./routes/login.tsx";
+import * as $logo_layout from "./routes/logo/_layout.tsx";
 import * as $logo_index from "./routes/logo/index.tsx";
 import * as $planets_id_ from "./routes/planets/[id].tsx";
 import * as $planets_index from "./routes/planets/index.tsx";
@@ -32,6 +33,7 @@ const manifest = {
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
     "./routes/login.tsx": $login,
+    "./routes/logo/_layout.tsx": $logo_layout,
     "./routes/logo/index.tsx": $logo_index,
     "./routes/planets/[id].tsx": $planets_id_,
     "./routes/planets/index.tsx": $planets_index,

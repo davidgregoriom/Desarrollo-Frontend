@@ -1,9 +1,14 @@
 
+type Props={
+    message?:string;
+}
 
-export default function Register() {
+
+export default function Register(message:Props) {
     return (
         <div>
         <h1>Register</h1>
+        {message && <p class="error-message">{message}</p>}
         <form method="POST" action="/register">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" />

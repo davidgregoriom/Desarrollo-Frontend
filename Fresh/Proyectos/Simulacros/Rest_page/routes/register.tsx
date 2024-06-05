@@ -8,7 +8,9 @@ import Register from "../components/Register.tsx";
 const config:RouteConfig={
     skipInheritedLayout:true,
 }
-
+type Data ={
+    message:string;
+}
 
 export const handler:Handlers ={
     POST: async(req:Request,ctx:FreshContext)=>{
@@ -63,6 +65,6 @@ export const handler:Handlers ={
     }
 }
 
-export default function Page(){
-    return <Register />
+export default function Page(props:PageProps<Data>){
+    return <Register message={props.message}/>
 }

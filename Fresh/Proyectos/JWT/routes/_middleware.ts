@@ -3,7 +3,9 @@ import { FreshContext } from "$fresh/server.ts";
 import { getCookies } from "$std/http/cookie.ts";
 
 type State ={
-    user:string;
+  user:string;
+  password:string;
+  id:string;
 }
 
 export async function handler(req: Request, ctx: FreshContext<State>) {

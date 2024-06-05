@@ -1,9 +1,13 @@
 import { FreshContext,Handlers } from "$fresh/server.ts";
+import { Logo } from "../../../types.ts";
 
+type response={
+  logos:Array<Logo>;
+}
 
 export const handler:Handlers  = {
   GET: async (_req: Request, ctx: FreshContext) => {
-    const name= ctx.params;
+    const name= ctx.params.name;
     const API_KEY = Deno.env.get("API_NINJAS_KEY");
     const API_URL = Deno.env.get("APILOGO_URL");
 
@@ -28,10 +32,10 @@ export const handler:Handlers  = {
     if (!response.ok) {
       return new Response("Error fetching logos", { status: 500 });
     }
-
+    debugger;
+    //console.log(response);
     const data = await response.json();
-    return new Response(JSON.stringify(data.docs), {
-      headers: { "Content-Type": "application/json" },
-    });
+    //error en el return este
+    return new Response(JSON.stringify(data));
   }
 };

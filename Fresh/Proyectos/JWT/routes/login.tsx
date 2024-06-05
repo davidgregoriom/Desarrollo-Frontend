@@ -4,17 +4,29 @@ import { setCookie } from "$std/http/cookie.ts";
 import Login from "../components/Login.tsx";
 
 
-export const config:RouteConfig={
+const config:RouteConfig={
     skipInheritedLayout:true
+}
+type Data ={
+    message:string;
 }
 
 
+
 export const handler:Haldelrs ={
-    POST:async(req:Request,ctx:FreshContext)=>{
+    POST:async(req:Request,ctx:FreshContext<unknown,Data>)=>{
         const url= new URL(req.url);
         const form = await req.formData();
         const username = form.get("username")?.toString()||"";
         const password = form.get("password")?.toString()||"";
+        const JWT_SECRET = Deno.env.get("JWT_SECRET");
+        if(!JWT_SECRET){
+            return new Error("JWT_SECRET not found");
+        }
+        const response = await
+
+
+
         if(username==="admin"&&password==="admin"){
             const token = jwt.sign({username},Deno.env.get("JWT_SECRET"),{
                 expiresIn:"24h"
