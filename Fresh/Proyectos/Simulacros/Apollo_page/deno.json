@@ -27,7 +27,8 @@
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
     "jsonwebtoken": "npm:jsonwebtoken@^9.0.2",
-    "$std/": "https://deno.land/std@0.216.0/"
+    "$std/": "https://deno.land/std@0.216.0/",
+    "@apollo/client": "https://esm.sh/@apollo/client@3.5.10"
   },
   "compilerOptions": {
     "jsx": "react-jsx",
