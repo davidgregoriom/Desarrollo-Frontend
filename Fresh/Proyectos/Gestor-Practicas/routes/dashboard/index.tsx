@@ -11,3 +11,8 @@ type State ={
 type Data={
     bookings:Booking[];
 }
+export const handler: Handlers = {
+    GET: async(req:Request,ctx:FreshContext<State,Data>)=>{
+
+    }
+}

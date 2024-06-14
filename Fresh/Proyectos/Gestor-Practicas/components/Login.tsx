@@ -2,7 +2,7 @@
 
 export default function Login(message:string|undefined) {
   return (
-    <div >
+    <div class="login">
         <h2>Login</h2>
         {message && <p class="error-message">{message}</p>}
         <form action="/login" method="post">

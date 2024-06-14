@@ -1,0 +1,33 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 600px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c2002f;
+    background-color: #ffffff;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 600px) {
+    .login {
+        width: 30%;
+        height: 30%;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
+
+

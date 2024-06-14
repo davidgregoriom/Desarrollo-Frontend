@@ -13,6 +13,7 @@ type Data={
 }
 
 // Implementar: Send verification email using smtp module
+// Implementar logo Fresh https://deno.land/x/fresh@1.6.8
 
 export const handler:Handlers ={
     POST:async(req:Request,ctx:FreshContext<Data>) =>{

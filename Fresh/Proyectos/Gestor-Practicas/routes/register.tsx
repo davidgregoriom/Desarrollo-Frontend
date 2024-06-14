@@ -2,6 +2,7 @@ import { User } from "../types.ts";
 import { RouteConfig,Handlers,FreshContext} from "$fresh/server.ts";
 import jwt from "jsonwebtoken";
 import { setCookie} from "$std/http/cookie.ts";
+import Register from "../components/Register.tsx";
 
 
 export const config: RouteConfig = {
@@ -73,4 +74,9 @@ export const handler:Handlers ={
             });
         }
     }
+}
+
+
+export default function LoginRoute(props:PageProps<Data>){
+    return <Register message={props.data?.message}/>
 }
