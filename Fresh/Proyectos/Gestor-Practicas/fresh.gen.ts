@@ -4,9 +4,13 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
+import * as $_layout from "./routes/_layout.tsx";
 import * as $_middleware from "./routes/_middleware.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
-import * as $dashboard_index from "./routes/dashboard/index.tsx";
+import * as $client_layout from "./routes/client/_layout.tsx";
+import * as $client_calendar_index from "./routes/client/calendar/index.tsx";
+import * as $client_dashboard_id_ from "./routes/client/dashboard/[id].tsx";
+import * as $client_dashboard_index from "./routes/client/dashboard/index.tsx";
+import * as $client_newBooking_index from "./routes/client/newBooking/index.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $login from "./routes/login.tsx";
 import * as $register from "./routes/register.tsx";
@@ -17,9 +21,13 @@ const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
+    "./routes/_layout.tsx": $_layout,
     "./routes/_middleware.tsx": $_middleware,
-    "./routes/api/joke.ts": $api_joke,
-    "./routes/dashboard/index.tsx": $dashboard_index,
+    "./routes/client/_layout.tsx": $client_layout,
+    "./routes/client/calendar/index.tsx": $client_calendar_index,
+    "./routes/client/dashboard/[id].tsx": $client_dashboard_id_,
+    "./routes/client/dashboard/index.tsx": $client_dashboard_index,
+    "./routes/client/newBooking/index.tsx": $client_newBooking_index,
     "./routes/index.tsx": $index,
     "./routes/login.tsx": $login,
     "./routes/register.tsx": $register,

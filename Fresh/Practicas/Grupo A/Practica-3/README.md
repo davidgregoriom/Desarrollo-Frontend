@@ -1,16 +1,13 @@
-# Fresh project
+# Cool - Agenda
 
-Your new Fresh project is ready to go. You can follow the Fresh "Getting
-Started" guide here: https://fresh.deno.dev/docs/getting-started
+Para esta práctica se pide arreglar todos los problemas que se encuentren en el código.
 
-### Usage
-
-Make sure to install Deno: https://deno.land/manual/getting_started/installation
-
-Then start the project:
-
-```
-deno task start
-```
-
-This will watch the project directory and restart as necessary.
+## Funcionalidad
+- Crear - Editar - Borrar contactos
+- Listar - filtrar contactos
+- Enviar mensajes a contactos
+- Chat scrolleable
+- No se puede crear-editar un contacto con errores en los campos
+- Se debe enviar los codigos http correctos
+- Los mensajes de error en el cliente deben ser correctos
+- Cuando se borra un contacto, se debe recargar la lista de contactos

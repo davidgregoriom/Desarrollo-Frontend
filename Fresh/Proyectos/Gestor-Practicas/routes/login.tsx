@@ -65,7 +65,7 @@ export const handler:Handlers ={
                 secure:true
             });
 
-            headers.set("location","/dashboard");
+            headers.set("location","/client/dashboard");
             return new Response("",{
                 status:307,
                 headers

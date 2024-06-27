@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  front:
+    image: node:18
+    ports:
+      - 3000:3000 #Cambie el puerto debido a que se estaba usando
+    volumes:
+      - ./front:/usr/src
+    depends_on:
+      - back
+    command: bash -c "cd /usr/src && npm run dev"
+
+  back:
+    image: denoland/deno:1.32.1
+    ports:
+      - 8080:8080 #Cambie el puerto debido a que se estaba usando
+    volumes:
+      - ./back:/usr/src
+    command: bash -c "cd /usr/src && deno task dev"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:4
+    ports:
+      - 27017:27017 #Cambie el puerto debido a que se estaba usando
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+    volumes:
+      - ./data:/data/db

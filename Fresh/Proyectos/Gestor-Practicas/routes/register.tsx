@@ -1,5 +1,5 @@
 import { User } from "../types.ts";
-import { RouteConfig,Handlers,FreshContext} from "$fresh/server.ts";
+import { RouteConfig,Handlers,FreshContext,PageProps} from "$fresh/server.ts";
 import jwt from "jsonwebtoken";
 import { setCookie} from "$std/http/cookie.ts";
 import Register from "../components/Register.tsx";
@@ -67,7 +67,7 @@ export const handler:Handlers ={
                 sameSite:"Lax",
                 domain:url.hostname,
             });
-            headers.set("location","/dashboard");
+            headers.set("location","/client/dashboard");
             return new Response("",{
                 status:307,
                 headers
@@ -77,6 +77,6 @@ export const handler:Handlers ={
 }
 
 
-export default function LoginRoute(props:PageProps<Data>){
+export default function RegisterRoute(props:PageProps<Data>){
     return <Register message={props.data?.message}/>
 }

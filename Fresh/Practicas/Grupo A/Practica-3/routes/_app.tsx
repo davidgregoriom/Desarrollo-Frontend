@@ -5,8 +5,13 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Practica-3</title>
+        <title>Cool-Agenda</title>
         <link rel="stylesheet" href="/styles.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+        >
+        </link>
       </head>
       <body>
         <Component />

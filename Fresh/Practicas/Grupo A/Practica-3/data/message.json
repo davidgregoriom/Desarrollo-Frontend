@@ -1,0 +1,50 @@
+[
+  {
+    "id": "347c01e1-aef9-4bba-422-9cc3caeb42a5",
+    "idUser": "347c01e1-aef9-4bba-a922-9cc3caeb42a5",
+    "message": "Hello, I'm interested in your product",
+    "createdAt": "2021-06-01T12:00:00.000Z"
+  },
+  {
+    "id": "347c01e1-aef9-4bba-a9229cc3caeb42a5",
+    "idUser": "347c01e1-aef9-4bba-a922-9cc3caeb42a5",
+    "message": "Hello, I'm interested in your product",
+    "createdAt": "2021-06-01T12:00:00.000Z"
+  },
+  {
+    "id": "347c01e1-aef9-4bba-a922-9cc3c1b42a5",
+    "idUser": "347c01e1-aef9-4bba-a922-9cc3caeb42a5",
+    "message": "Hello, I'm interested in your product",
+    "createdAt": "2021-06-01T12:00:00.000Z"
+  },
+  {
+    "id": "0ef1c18a-2d45-4b1a-b9bb-a295ad49f724",
+    "createdAt": "2024-04-05T16:37:11.629Z",
+    "idUser": "b9f14fef-8e00-4137-a26e-8a001000dfa2",
+    "message": "He"
+  },
+  {
+    "id": "e4a8cecd-b16c-40ed-8e3d-a78061299215",
+    "createdAt": "2024-04-05T18:06:05.271Z",
+    "idUser": "aa7ebb40-55d6-493d-b79d-c9a0d68d3e18",
+    "message": "Hell"
+  },
+  {
+    "id": "99db2122-ba41-4671-86b6-41592e7bdb73",
+    "createdAt": "2024-04-05T18:06:19.390Z",
+    "idUser": "aa7ebb40-55d6-493d-b79d-c9a0d68d3e18",
+    "message": "¿How are yo?"
+  },
+  {
+    "id": "f1f4d38b-6798-47d1-b275-c4552cd7f0fe",
+    "createdAt": "2024-04-05T18:47:24.864Z",
+    "idUser": "c311abf6-e98b-4ddc-a36f-a4a203a9d711",
+    "message": "Jua"
+  },
+  {
+    "id": "d1bac370-c267-46c7-8cb0-022724c28ab8",
+    "createdAt": "2024-04-05T18:47:30.304Z",
+    "idUser": "c311abf6-e98b-4ddc-a36f-a4a203a9d711",
+    "message": "Fe"
+  }
+]
