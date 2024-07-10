@@ -10,7 +10,7 @@ import * as $client_layout from "./routes/client/_layout.tsx";
 import * as $client_calendar_index from "./routes/client/calendar/index.tsx";
 import * as $client_dashboard_id_ from "./routes/client/dashboard/[id].tsx";
 import * as $client_dashboard_index from "./routes/client/dashboard/index.tsx";
-import * as $client_newBooking_index from "./routes/client/newBooking/index.tsx";
+import * as $client_newBooking_index from "./routes/client/alterBooking/index.tsx";
 import * as $index from "./routes/index.tsx";
 import * as $login from "./routes/login.tsx";
 import * as $register from "./routes/register.tsx";
