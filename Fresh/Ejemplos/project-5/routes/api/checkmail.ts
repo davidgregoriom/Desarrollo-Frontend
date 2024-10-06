@@ -5,7 +5,7 @@ export const handler: Handlers = {
   POST: async (req: Request) => {
     try {
       const body = await req.json();
-      const { email } = body;
+      const email = body.email;
       const exists = await ContactModel.findOne({
         email,
       });

@@ -6,15 +6,20 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $_middleware from "./routes/_middleware.tsx";
+import * as $admin_bookings_index from "./routes/admin/bookings/index.tsx";
+import * as $admin_config_index from "./routes/admin/config/index.tsx";
+import * as $admin_subjects_addCalendarSubject_index from "./routes/admin/subjects/addCalendarSubject/index.tsx";
+import * as $admin_subjects_addSubject_index from "./routes/admin/subjects/addSubject/index.tsx";
+import * as $admin_subjects_index from "./routes/admin/subjects/index.tsx";
 import * as $client_layout from "./routes/client/_layout.tsx";
+import * as $client_alterBooking_index from "./routes/client/alterBooking/index.tsx";
 import * as $client_calendar_index from "./routes/client/calendar/index.tsx";
 import * as $client_dashboard_id_ from "./routes/client/dashboard/[id].tsx";
-import * as $client_dashboard_index from "./routes/client/dashboard/index.tsx";
-import * as $client_newBooking_index from "./routes/client/alterBooking/index.tsx";
-import * as $index from "./routes/index.tsx";
+import * as $client_dashboard_index from "./routes/client/dashboard/i./islands/admin/SubjectClient/SubjectForm.tsxoutes/index.tsx";
 import * as $login from "./routes/login.tsx";
 import * as $register from "./routes/register.tsx";
-
+import * as $SubjectClient_CalendarSubjectForm from "./islands/SubjectClient/CalendarSubjectForm.tsx";
+import * as $SubjectClient_SubjectForm from "./islands/SubjectClient/SubjectForm.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -23,16 +28,27 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/_layout.tsx": $_layout,
     "./routes/_middleware.tsx": $_middleware,
+    "./routes/admin/bookings/index.tsx": $admin_bookings_index,
+    "./routes/admin/config/index.tsx": $admin_config_index,
+    "./routes/admin/subjects/addCalendarSubject/index.tsx":
+      $admin_subjects_addCalendarSubject_index,
+    "./routes/admin/subjects/addSubject/index.tsx":
+      $admin_subjects_addSubject_index,
+    "./routes/admin/subjects/index.tsx": $admin_subjects_index,
     "./routes/client/_layout.tsx": $client_layout,
+    "./routes/client/alterBooking/index.tsx": $client_alterBooking_index,
     "./routes/client/calendar/index.tsx": $client_calendar_index,
     "./routes/client/dashboard/[id].tsx": $client_dashboard_id_,
     "./routes/client/dashboard/index.tsx": $client_dashboard_index,
-    "./routes/client/newBooking/index.tsx": $client_newBooking_index,
     "./routes/index.tsx": $index,
     "./routes/login.tsx": $login,
     "./routes/register.tsx": $register,
   },
-  islands: {},
+  islands: {
+    "./islands/SubjectClient/CalendarSubjectForm.tsx":
+      $SubjectClient_CalendarSubjectForm,
+    "./islands/SubjectClient/SubjectForm.tsx": $SubjectClient_SubjectForm,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

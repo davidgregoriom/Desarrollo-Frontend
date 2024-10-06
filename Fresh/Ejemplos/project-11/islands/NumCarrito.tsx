@@ -6,7 +6,6 @@ import { CartItem } from "../types.ts";
 const NumCarrito = () => {
   useEffect(() => {
     // read cart cookie and set cartNumber
-
     const cookies = document.cookie.split("; ");
     const cartCookie = cookies.find((cookie) => cookie.startsWith("cart="));
     if (cartCookie) {

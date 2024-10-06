@@ -14,7 +14,7 @@ export const handler: Handlers = {
     const username = form.get("username")?.toString() || "";
     const password = form.get("password")?.toString() || "";
 
-    if (username === "a" && password === "a") {
+    if (username !== "" && password !== "a") {
       // create JWT token and set it as a cookie
       const token = jwt.sign({ username }, Deno.env.get("JWT_SECRET"), {
         expiresIn: "24h",

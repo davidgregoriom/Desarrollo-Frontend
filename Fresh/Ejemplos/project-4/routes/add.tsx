@@ -10,17 +10,26 @@ export const handler: Handlers = {
         name: form.get("name"),
         email: form.get("email"),
       };
-
+      const find = await ContactModel.findOne({email: data.email});
+      const headers = new Headers();
+      if(find){
+        headers.set("location", "/");
+        return new Response("Email already exists", {
+          headers,
+          status: 400,
+        });
+      }
       await ContactModel.create(data);
-
+      headers.set("location", "/");
       return new Response("", {
         status: 303,
-        headers: {
-          "Location": "/",
-        },
+        headers
       });
     } catch (error) {
+      const headers = new Headers();
+      headers.set("location", "/");
       return new Response(error.message, {
+        headers,
         status: 500,
       });
     }

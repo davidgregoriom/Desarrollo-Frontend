@@ -1,3 +1,6 @@
+
+
+
 const Register = () => (
   <div class="register-container">
     <h2>Register</h2>

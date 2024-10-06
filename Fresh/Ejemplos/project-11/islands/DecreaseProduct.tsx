@@ -11,6 +11,7 @@ const DecreaseProduct: FunctionComponent<Props> = (props) => {
     // read cart cookie
     const cookies = document.cookie.split("; ");
     const cartCookie = cookies.find((cookie) => cookie.startsWith("cart="));
+    window.location.href="/cart";
     if (!cartCookie) {
       return;
     } else {

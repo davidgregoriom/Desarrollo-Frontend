@@ -12,6 +12,9 @@ const Menu: FunctionComponent<MenuProps> = ({ selected }) => {
       <a href="/add" class={selected === "Add" ? "selected" : ""}>
         Add new contact
       </a>
+      <a href="/delete">
+        Delete contact
+      </a>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import {PageProps, RouterConfig,Handlers,FreshContext} from "$fresh/server.ts";
+import {PageProps, RouteConfig,Handlers,FreshContext} from "$fresh/server.ts";
 
 
 type Data={
